@@ -26,6 +26,18 @@ function Home() {
                 <div className="promo-title">HUGE BLACK FRIDAY SALE</div>
                 <div className="promo-subtitle">Get up to 70% off your favourite products</div>
             </div>
+
+            <div className="socials">
+                <i class="fab fa-facebook fa-3x"></i>
+                <i class="fab fa-instagram fa-3x"></i>
+                <i class="fab fa-twitter fa-3x"></i>
+                <i class="fab fa-snapchat fa-3x"></i>
+                <i class="fab fa-tiktok fa-3x"></i>
+            </div>
+            <div className="tagline">
+                <h3>#Goldenshoelovesyou</h3>
+                <p>Use our hashtag on social media for a chance to be featured on our website! </p>
+            </div>
         </div>
     )
 }

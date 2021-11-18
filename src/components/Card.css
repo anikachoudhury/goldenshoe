@@ -12,13 +12,34 @@
     width: 100vw;
     height: auto;
     object-fit: cover;
-
-    transition: all 0.3s ease-in-out;
 }
 
 .card-image>img:hover {
-    opacity: 0.8;
     cursor: pointer;
+}
+
+.card-title {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-title:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.card-title:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 @media only screen and (min-width: 800px) {

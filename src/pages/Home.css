@@ -49,9 +49,9 @@
 }
 
 hr {
-    margin-top: 100px;
+    margin-top: 80px;
     width: 80vw;
-    opacity: 0.8;
+    opacity: 0.4;
 }
 
 .home-cards {
@@ -63,10 +63,6 @@ hr {
     .home-cards {
         display: flex;
         justify-content: space-around;
-    }
-
-    hr {
-        margin-top: 80px;
     }
 
     .home-cards {
@@ -90,4 +86,22 @@ hr {
 .promo-title {
     font-weight: 700;
     font-size: 2rem;
+}
+
+.socials {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 15vh;
+    margin-top: 20px;
+}
+
+.tagline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tagline>p {
+    opacity: 0.6;
 }
