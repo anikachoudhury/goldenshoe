@@ -1,0 +1,70 @@
+.nav {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS for the top navigation bar */
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+
+    height: 30px;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background-color: rgb(167, 36, 36);
+    color: white;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+/* CSS for bottom navigation bar */
+.nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 60px;
+    padding-bottom: 10px;
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+
+    color: rgb(7, 7, 97);
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    text-shadow: 20px;
+}
+
+.nav-category>i>input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+    padding: 10px;
+    width: 40vw;
+
+    text-align: center;
+}
+
+.nav-category>i>input:focus {
+    outline: none;
+}
+
+.nav-category>i {
+    cursor: pointer;
+}
+
+.nav-basket-user {
+    width: 9vw;
+    display: flex;
+    justify-content: space-between;
+}
+

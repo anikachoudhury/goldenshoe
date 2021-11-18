@@ -1,0 +1,52 @@
+.home {
+    position: relative;
+    width: 100%;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-img>img {
+    height: 60vh;
+    width: 100vw;
+    object-fit: cover;
+
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+.home-img>img:hover {
+    transform: scale(1.1);
+}
+
+
+.home-img>button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    padding: 14px 26px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+
+}
+
+hr {
+    margin-top: 100px;
+    width: 80vw;
+    opacity: 0.8;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .home-img>img{
+        height: 75vh;
+    }
+
+}
