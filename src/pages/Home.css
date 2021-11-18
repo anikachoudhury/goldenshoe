@@ -1,8 +1,13 @@
 .home {
-    position: relative;
+    
     width: 100%;
-
+    margin-top: 50px;
     font-family: 'Poppins', sans-serif;
+    margin-bottom: 100px;
+}
+
+.home-img {
+    position: relative;
 }
 
 .home-img>img {
@@ -13,6 +18,7 @@
     -webkit-transition: all 0.8s ease;
     -moz-transition: all 0.8s ease;
     transition: all 0.8s ease;
+    
 }
 
 .home-img>img:hover {
@@ -35,6 +41,11 @@
     letter-spacing: 0.1em;
     font-size: 0.9rem;
 
+    transition: all 0.3s ease;
+}
+
+.home-img>button:hover {
+    opacity: 0.8;
 }
 
 hr {
@@ -43,10 +54,40 @@ hr {
     opacity: 0.8;
 }
 
+.home-cards {
+    display: flex;
+    flex-direction: column;
+}
 
 @media only screen and (min-width: 800px) {
-    .home-img>img{
-        height: 75vh;
+    .home-cards {
+        display: flex;
+        justify-content: space-around;
     }
 
+    hr {
+        margin-top: 80px;
+    }
+
+    .home-cards {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+.promo {
+    background-color: #ccbaad;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.promo-title {
+    font-weight: 700;
+    font-size: 2rem;
 }

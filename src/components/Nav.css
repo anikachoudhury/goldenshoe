@@ -2,23 +2,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* CSS for the top navigation bar */
-.nav-top {
-    display: flex;
-    justify-content: space-between;
-
-    height: 30px;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    background-color: rgb(167, 36, 36);
-    color: white;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
 
 /* CSS for bottom navigation bar */
 .nav-bottom {
@@ -29,6 +12,11 @@
     padding-right: 15px;
     height: 60px;
     padding-bottom: 10px;
+    background-color: white;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 }
 
 .nav-logo {
@@ -50,8 +38,6 @@
     
     padding: 10px;
     width: 40vw;
-
-    text-align: center;
 }
 
 .nav-category>i>input:focus {
@@ -63,8 +49,22 @@
 }
 
 .nav-basket-user {
-    width: 9vw;
+    width: 20vw;
     display: flex;
     justify-content: space-between;
 }
+
+.fa-bars {
+    margin-right: 20px;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .nav-basket-user {
+        width: 12vw;
+    }
+}
+
+
+
 
