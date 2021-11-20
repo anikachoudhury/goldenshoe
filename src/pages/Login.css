@@ -49,7 +49,7 @@ h2 {
 .signup {
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 60%;
     justify-content: space-between;
 }
 
@@ -87,4 +87,8 @@ h2 {
     .login-card {
         width: 60vw;
     }
+}
+
+input:focus {
+    outline: black;
 }

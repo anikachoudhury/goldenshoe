@@ -37,13 +37,13 @@ app.post('/login', (req, res) => {
     [email, password],
     (err, results) => {
         if (err) {
-            res.send({err: err})
+            res.send({err: err});
         } 
 
-        if (results) {
-            res.send(results)
+        if (results.length > 0) {
+            res.send(results);
         } else {
-            res.send({message: "Wrong email/ password combination"});
+            res.send({ message: "Wrong email/ password combination" });
         }
     });
 })

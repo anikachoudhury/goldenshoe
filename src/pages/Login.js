@@ -11,7 +11,7 @@ function Login() {
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
 
-    
+    const [loginStatus, setLoginStatus] = useState('');
 
     const register = () => {
         Axios.post('http://localhost:3001/register', {
@@ -28,6 +28,12 @@ function Login() {
             email: user,
             password: pass
         }).then(response => {
+
+            if(response.data.message) {
+                setLoginStatus(response.data.message);
+            } else {
+                setLoginStatus("Welcome " + response.data[0].name);
+            }
             console.log(response);
         })
     }
@@ -70,6 +76,7 @@ function Login() {
                     </div>
 
                     <button onClick={login}>Log In</button>
+                    <h5>{loginStatus}</h5>
                 </div>
             </div>
         </div>
