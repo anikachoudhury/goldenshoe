@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
+import Axios from 'axios';
 
 function Login() {
+
+    const [nameReg, setNameReg] = useState('');
+    const [emailReg, setEmailReg] = useState('');
+    const [passwordReg, setPasswordReg] = useState('');
+
+    const [user, setUser] = useState('');
+    const [pass, setPass] = useState('');
+
+    
+
+    const register = () => {
+        Axios.post('http://localhost:3001/register', {
+            name: nameReg,
+            email: emailReg,
+            password: passwordReg,
+        }).then((response) => {
+            console.log(response);
+        });
+    }
+
+    const login = () => {
+        Axios.post('http://localhost:3001/login', {
+            email: user,
+            password: pass
+        }).then(response => {
+            console.log(response);
+        })
+    }
+
     return (
         <div className="login">
             <div className="login-card">
@@ -9,37 +39,37 @@ function Login() {
                     <h2>Sign Up</h2>
                     <p>Why not create an account and make shopping next time easier?</p>
                     <div>
-                        <label for="name">Enter your name</label><br/>
-                        <input type="text" placeholder="E.g. John Smith"></input><br/>
+                        <label htmlFor="name">Enter your name</label><br/>
+                        <input type="text" placeholder="E.g. John Smith" onChange={(e) => {setNameReg(e.target.value)}}></input><br/>
                     </div>
 
                     <div>
-                        <label for="email" className="email">Enter your email address</label><br/>
-                        <input type="email" placeholder="example@gmail.com"></input><br/>
+                        <label htmlFor="email" className="email">Enter your email address</label><br/>
+                        <input type="email" placeholder="example@gmail.com" onChange={(e) => {setEmailReg(e.target.value)}}></input><br/>
                     </div>
 
                     <div>
-                        <label for="password" className="pw">Enter a password</label><br/>
-                        <input type="password" placeholder="****"></input>
+                        <label htmlFor="password" className="pw">Enter a password</label><br/>
+                        <input type="password" placeholder="****" onChange={(e) => {setPasswordReg(e.target.value)}}></input>
                     </div>
 
-                    <button>Create Account</button>
+                    <button onClick={register}>Create Account</button>
                 </div>
 
                 <div className="signup">
                     <h2>Log In</h2>
 
                     <div>
-                        <label for="email" className="email">Enter your email address</label><br/>
-                        <input type="email" placeholder="example@gmail.com"></input><br/>
+                        <label htmlFor="email" className="email">Enter your email address</label><br/>
+                        <input type="email" placeholder="example@gmail.com" onChange={(e) => {setUser(e.target.value)}}></input><br/>
                     </div>
 
                     <div>
-                        <label for="password" className="pw">Enter your password</label><br/>
-                        <input type="password" placeholder="****"></input>
+                        <label htmlFor="password" className="pw">Enter your password</label><br/>
+                        <input type="password" placeholder="****" onChange={(e) => {setPass(e.target.value)}}></input>
                     </div>
 
-                    <button>Log In</button>
+                    <button onClick={login}>Log In</button>
                 </div>
             </div>
         </div>

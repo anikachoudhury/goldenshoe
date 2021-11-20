@@ -37,6 +37,8 @@ function Nav() {
             <hr/>
             <li>Slippers</li>
             <hr/>
+            <li className="bold">Sale</li>
+            <hr/>
         </div>
     }
 
